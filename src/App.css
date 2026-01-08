@@ -1,0 +1,234 @@
+/* Card animations */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(32, 178, 170, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 128, 128, 0.4) !important;
+}
+
+/* Smooth transitions for list items */
+.list-group-item {
+  transition: background-color 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(32, 178, 170, 0.15);
+}
+
+.list-group-item:hover {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(32, 178, 170, 0.3);
+}
+
+/* Pagination styling */
+.page-item.active .page-link {
+  background: linear-gradient(135deg, #008080 0%, #006666 100%);
+  border-color: #008080;
+  color: white;
+}
+
+.page-link {
+  color: #008080;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(32, 178, 170, 0.2);
+}
+
+.page-link:hover {
+  color: #006666;
+  background-color: rgba(32, 178, 170, 0.1);
+}
+
+/* Button animations */
+.btn {
+  transition: all 0.2s ease;
+}
+
+/* Fade in animation for alerts */
+.alert {
+  animation: fadeIn 0.3s ease-in;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+}
+
+.alert-info {
+  background-color: rgba(32, 178, 170, 0.15);
+  border-color: rgba(32, 178, 170, 0.3);
+  color: #006666;
+}
+
+.alert-danger {
+  background-color: rgba(255, 99, 71, 0.15);
+  border-color: rgba(255, 99, 71, 0.3);
+  color: #d9534f;
+}
+
+.alert-light {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toast notification styling for fixed alerts */
+.alert[style*="position: fixed"] {
+  animation: slideInRight 0.3s ease-out;
+  border-left: 4px solid;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 99, 71, 0.3);
+}
+
+.alert-danger[style*="position: fixed"] {
+  border-left-color: #ff6347;
+  color: #d9534f;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Spinner enhancements */
+.spinner-border {
+  animation: spinner-border 0.75s linear infinite;
+}
+
+/* Checkbox styling improvements */
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #008080;
+  border-color: #008080;
+}
+
+/* Better focus states for accessibility */
+.btn:focus,
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(32, 178, 170, 0.25);
+  border-color: #20b2aa;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #008080 0%, #006666 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #006666 0%, #004d4d 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.6);
+}
+
+/* Form controls */
+.form-control,
+.form-select {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(32, 178, 170, 0.3);
+  transition: all 0.2s ease;
+  color: #0f2027;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: #20b2aa;
+  box-shadow: 0 0 0 0.2rem rgba(32, 178, 170, 0.25);
+}
+
+/* Header styling */
+header h1 {
+  background: linear-gradient(135deg, #20b2aa 0%, #66cdaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 10px rgba(32, 178, 170, 0.3);
+}
+
+header p {
+  color: #5f9ea0;
+}
+
+/* Card header gradients */
+.card-header-gradient-primary {
+  background: linear-gradient(135deg, #008080 0%, #006666 100%);
+  color: white;
+  border: none;
+}
+
+.card-header-gradient-secondary {
+  background: linear-gradient(135deg, #20b2aa 0%, #008b8b 100%);
+  color: white;
+  border: none;
+}
+
+.card-header-gradient-tertiary {
+  background: linear-gradient(135deg, #5f9ea0 0%, #2f6f71 100%);
+  color: white;
+  border: none;
+}
+
+/* Skeleton loader styles */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 25%, rgba(32, 178, 170, 0.2) 50%, rgba(255, 255, 255, 0.5) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.skeleton-title {
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.skeleton-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.skeleton-line-short {
+  width: 60%;
+}
+
+.skeleton-line-medium {
+  width: 80%;
+}
+
+.skeleton-line-long {
+  width: 100%;
+}
